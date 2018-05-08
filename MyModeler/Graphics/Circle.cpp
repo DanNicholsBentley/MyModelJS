@@ -1,5 +1,6 @@
 #include "stdafx.h"
 
+#include <iostream>
 #include <string>
 
 using std::string;
@@ -18,10 +19,12 @@ namespace MyModeler {
 		Circle::Circle(Point orginPt, double radius, Vector normal, string colorName) 
 			: GraphicalElement(colorName), origin(orginPt), radius(radius), normal(normal)
 		{
+			std::cout << "Circle created" << std::endl;
 		}
 
 		Circle::~Circle()
 		{
+			std::cout << "Circle destroyed" << std::endl;
 		}
 
 		Point Circle::getOrigin() const

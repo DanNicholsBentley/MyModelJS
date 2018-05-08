@@ -1,5 +1,6 @@
 #include "stdafx.h"
 
+#include <iostream>
 #include <vector>
 #include <string>
 
@@ -15,10 +16,12 @@ namespace MyModeler {
 
 		LineString::LineString(std::string colorName) : GraphicalElement(colorName)
 		{
+			std::cout << "Linestring created" << std::endl;
 		}
 
 		LineString::~LineString()
 		{
+			std::cout << "Linestring destroyed" << std::endl;
 		}
 
 		vector<Point> LineString::getVertices() const

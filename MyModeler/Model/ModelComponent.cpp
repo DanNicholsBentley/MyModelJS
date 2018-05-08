@@ -1,5 +1,6 @@
 #include "stdafx.h"
 
+#include <iostream>
 #include <string>
 #include <vector>
 #include <memory>
@@ -13,19 +14,22 @@ namespace MyModeler {
 
 	ModelComponent::ModelComponent() : m_Id("")
 	{
+		std::cout << "ModelComponent created" << std::endl;
 	}
 
 	ModelComponent::ModelComponent(string name) : m_Id(Utilities::GenerateId()), m_Name(name)
 	{
+		std::cout << "ModelComponent: " << name << " created" << std::endl;
+	}
+
+	ModelComponent::~ModelComponent()
+	{
+		std::cout << "ModelComponent: " << m_Name << " destroyed" << std::endl;
 	}
 
 	bool ModelComponent::IsValid() const
 	{
 		return m_Id != "";
-	}
-
-	ModelComponent::~ModelComponent()
-	{
 	}
 
 	string ModelComponent::GetId() const

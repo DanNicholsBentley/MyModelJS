@@ -1,5 +1,6 @@
 #include "stdafx.h"
 
+#include <iostream>
 #include <string>
 
 using std::string;
@@ -12,11 +13,13 @@ namespace MyModeler {
 
 		GraphicalElement::GraphicalElement(string colorName) : m_Id(Utilities::GenerateId()), m_Color(colorName)
 		{
+			std::cout << "GraphicalElement created" << std::endl;
 		}
 
 
 		GraphicalElement::~GraphicalElement()
 		{
+			std::cout << "GraphicalElement destroyed" << std::endl;
 		}
 
 		string GraphicalElement::GetId() const

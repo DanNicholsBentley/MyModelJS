@@ -2,6 +2,7 @@
 #include "Line.h"
 #include "Point.h"
 
+#include <iostream>
 #include <string>
 
 using MyModeler::Geometry::Point;
@@ -12,10 +13,12 @@ namespace MyModeler {
 		Line::Line(Point startPt, Point endPt, std::string colorName) : 
 			GraphicalElement(colorName), start(startPt), end(endPt)
 		{
+			std::cout << "Line created" << std::endl;
 		}
 
 		Line::~Line()
 		{
+			std::cout << "Line destoyed" << std::endl;
 		}
 
 		Point Line::getStart() const

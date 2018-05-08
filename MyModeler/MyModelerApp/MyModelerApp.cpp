@@ -99,10 +99,10 @@ int main()
 	std::cout << *comp2 << std::endl;
 
 
-	Model myModel("MyModel");
-	myModel.AddComponent(comp1);
-	myModel.AddComponent(comp2);
-	std::cout << myModel << std::endl;
+	auto myModel = std::make_shared<Model>("MyModel");
+	myModel->AddComponent(comp1);
+	myModel->AddComponent(comp2);
+	std::cout << *myModel << std::endl;
 
     return 0;
 }
