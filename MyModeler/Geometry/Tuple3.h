@@ -12,7 +12,7 @@ namespace MyModeler { 	namespace Geometry {
 		double z;
 
 		// Constructors
-		Tuple3(double x, double y, double z=0);
+		Tuple3(double x=0, double y=0, double z=0);
 		Tuple3(const Tuple3 &p1);
 
 		// Setters
