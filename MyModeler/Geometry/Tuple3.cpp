@@ -33,9 +33,9 @@ namespace MyModeler {
 
 		// Methods
 
-		Tuple3 Tuple3::Offset(double x, double y, double z) const
+		Tuple3 Tuple3::Offset(double dx, double dy, double dz) const
 		{
-			return Tuple3(x + x, y + y, z + z);
+			return Tuple3(x + dx, y + dy, z + dz);
 		}
 
 		double Tuple3::Distance(const Tuple3 &p1) const
